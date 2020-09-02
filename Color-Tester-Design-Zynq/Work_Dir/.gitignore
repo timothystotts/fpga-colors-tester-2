@@ -1,0 +1,7 @@
+*.hw/
+*.cache/
+*.runs/
+*.sim/
+*.ip_user_files/
+*.tmp/
+ip_upgrade.log
