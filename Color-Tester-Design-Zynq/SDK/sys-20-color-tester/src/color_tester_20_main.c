@@ -287,7 +287,8 @@ int main()
 				ledChanValue[2] = experiData.capturedString[10];
 				rgbChanValues[2] = atoi(ledChanValue);
 
-				xil_printf("Testing RGB mix: %03hhu,%03hhu,%03hhu = 0x%02hhx%02hhx%02hhx\r\n",
+				xil_printf("Testing RGB mix: LED%u %03u,%03u,%03u = 0x%02x%02x%02x\r\n",
+						ledSilkIdx,
 						rgbChanValues[0], rgbChanValues[1], rgbChanValues[2],
 						rgbChanValues[0], rgbChanValues[1], rgbChanValues[2]);
 
