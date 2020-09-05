@@ -89,10 +89,16 @@ typedef struct T_EXPERIMENT_DATA_TAG
 	u32 switchesReadPrev;
 	u32 buttonsReadPrev;
 	/* Captured keypad string */
+	XStatus kypdStatus;
+	XStatus kypdLastStatus;
+	u8 key;
+	u8 lastKey;
+	u8 stringIdx;
 	u8 capturedString[CAPTURED_STRING_LENGTH];
 } t_experiment_data;
 
 /* Function prototypes */
+static void Experiment_Initialize(t_experiment_data* expData);
 static void Experiment_OLEDInitialize(t_experiment_data* expData);
 static void Experiment_KYPDInitialize(t_experiment_data* expData);
 static void Experiment_LEDsInitialize(t_experiment_data* expData);
@@ -103,6 +109,21 @@ static void Experiment_SetLedUpdate(t_experiment_data* expData,
 
 /* Global variables */
 t_experiment_data experiData; // Global as that the object is always in scope, including interrupt handler.
+
+/*-----------------------------------------------------------*/
+/* Helper function to initialize Experiment Data. */
+static void Experiment_Initialize(t_experiment_data* expData)
+{
+	expData->switchesRead = 0x00000000;
+	expData->buttonsRead = 0x00000000;
+	expData->switchesReadPrev = 0x00000000;
+	expData->buttonsReadPrev = 0x00000000;
+	expData->kypdStatus = KYPD_NO_KEY;
+	expData->kypdLastStatus = KYPD_NO_KEY;
+	expData->key = 'x';
+	expData->lastKey = 'x';
+	expData->stringIdx = 0;
+}
 
 /*-----------------------------------------------------------*/
 /* Helper function to set an updated state to one of the 8 LEDs. */
@@ -190,11 +211,6 @@ void Experiment_PeripheralsInitialize(t_experiment_data* expData)
 void Experiment_CaptureStringFromKeypad(t_experiment_data* expData)
 {
 	u16 keystate;
-	XStatus status = KYPD_NO_KEY;
-	XStatus lastStatus = KYPD_NO_KEY;
-	u8 key = 'x';
-	u8 lastKey = 'x';
-	u8 stringIdx = 0;
 
 	Xil_Out32(expData->kypdDevice.GPIO_addr, 0xF);
 
@@ -204,39 +220,39 @@ void Experiment_CaptureStringFromKeypad(t_experiment_data* expData)
 		keystate = KYPD_getKeyStates(&(expData->kypdDevice));
 
 		// Determine which single key is pressed, if any
-		status = KYPD_getKeyPressed(&(expData->kypdDevice), keystate, &key);
+		expData->kypdStatus = KYPD_getKeyPressed(&(expData->kypdDevice), keystate, &(expData->key));
 
 		// Capture new key if a new key is pressed or if status has changed
-		if ((status == KYPD_SINGLE_KEY) &&
-				((status != lastStatus) || (key != lastKey)))
+		if ((expData->kypdStatus == KYPD_SINGLE_KEY) &&
+				((expData->kypdStatus != expData->kypdLastStatus) || (expData->key != expData->lastKey)))
 		{
-			xil_printf("Key Pressed: %c\r\n", (char)key);
-			lastKey = key;
+			xil_printf("Key Pressed: %c\r\n", (char)(expData->key));
+			expData->lastKey = expData->key;
 
 			// All sequences start with key press 'A'
-			if (key == 'A')
+			if (expData->key == 'A')
 			{
-				stringIdx = 0;
+				expData->stringIdx = 0;
 			}
 
-			if (stringIdx < CAPTURED_STRING_LENGTH)
+			if (expData->stringIdx < CAPTURED_STRING_LENGTH)
 			{
-				expData->capturedString[stringIdx] = key;
-				stringIdx++;
+				expData->capturedString[expData->stringIdx] = expData->key;
+				++(expData->stringIdx);
 			}
 
 			// All sequences are length \ref CAPTURED_STRING_LENGTH
-			if (stringIdx == CAPTURED_STRING_LENGTH)
+			if (expData->stringIdx == CAPTURED_STRING_LENGTH)
 			{
 				break;
 			}
 		}
-		else if ((status == KYPD_MULTI_KEY) && (status != lastStatus))
+		else if ((expData->kypdStatus == KYPD_MULTI_KEY) && (expData->kypdStatus != expData->kypdLastStatus))
 		{
 			xil_printf("Error: Multiple keys pressed\r\n");
 		}
 
-		lastStatus = status;
+		expData->kypdLastStatus = expData->kypdStatus;
 
 		usleep(1000);
 	}
@@ -253,6 +269,7 @@ int main()
 	char printBuf[16];
     init_platform();
 
+    Experiment_Initialize(&experiData);
     Experiment_PeripheralsInitialize(&experiData);
 
     for(;;)
@@ -287,7 +304,7 @@ int main()
 				ledChanValue[2] = experiData.capturedString[10];
 				rgbChanValues[2] = atoi(ledChanValue);
 
-				xil_printf("Testing RGB mix: LED%u %03u,%03u,%03u = 0x%02x%02x%02x\r\n",
+				xil_printf("Testing RGB mix LED%u: %03u,%03u,%03u = 0x%02x%02x%02x\r\n",
 						ledSilkIdx,
 						rgbChanValues[0], rgbChanValues[1], rgbChanValues[2],
 						rgbChanValues[0], rgbChanValues[1], rgbChanValues[2]);
