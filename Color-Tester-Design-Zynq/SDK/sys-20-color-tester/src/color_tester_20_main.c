@@ -229,7 +229,7 @@ void Experiment_CaptureStringFromKeypad(t_experiment_data* expData)
 			xil_printf("Key Pressed: %c\r\n", (char)(expData->key));
 			expData->lastKey = expData->key;
 
-			// All sequences start with key press 'A'
+			// All sequences to capture start with key press 'A'
 			if (expData->key == 'A')
 			{
 				expData->stringIdx = 0;
@@ -241,9 +241,11 @@ void Experiment_CaptureStringFromKeypad(t_experiment_data* expData)
 				++(expData->stringIdx);
 			}
 
-			// All sequences are length \ref CAPTURED_STRING_LENGTH
+			// All sequences to capture re length \ref CAPTURED_STRING_LENGTH
 			if (expData->stringIdx == CAPTURED_STRING_LENGTH)
 			{
+				expData->kypdLastStatus = expData->kypdStatus;
+				expData->stringIdx = 0;
 				break;
 			}
 		}
