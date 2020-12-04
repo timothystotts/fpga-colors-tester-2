@@ -23,10 +23,10 @@ discrete LEDs and display.
 
 ### Project information document:
 
-[FPGA Colors Palette Tester info](https://github.com/timothystotts/fpga-colors-tester-2/blob/master/Colors%20Palette%20Tester%20-%20Zynq.pdf)
+[FPGA Colors Palette Tester info](https://github.com/timothystotts/fpga-colors-tester-2/blob/main/Colors%20Palette%20Tester%20-%20Zynq.pdf)
 
 ### Target device assembly: Zybo-Z7-20 with Pmod KYPD, Pmod OLEDrgb, on extension cables
-![Target device assembly](https://github.com/timothystotts/fpga-colors-tester-2/blob/master/Color-Tester-Design-Documents/img_color-palette-tester-zynq-assembled-20200902_130951746.jpg)
+![Target device assembly](https://github.com/timothystotts/fpga-colors-tester-2/blob/main/Color-Tester-Design-Documents/img_color-palette-tester-zynq-assembled-20200902_130951746.jpg)
 
 ### Target device execution example: Zybo-Z7-20 with Pmod KYPD, Pmod OLEDrgb, on extension cables
-![Target device execution example](https://github.com/timothystotts/fpga-colors-tester-2/blob/master/Color-Tester-Design-Documents/img_color-palette-tester-zynq-executing-a-20200902_130933775.jpg)
+![Target device execution example](https://github.com/timothystotts/fpga-colors-tester-2/blob/main/Color-Tester-Design-Documents/img_color-palette-tester-zynq-executing-a-20200902_130933775.jpg)
