@@ -1,8 +1,8 @@
 --Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
---Tool Version: Vivado v.2020.2 (lin64) Build 3064766 Wed Nov 18 09:12:47 MST 2020
---Date        : Fri Dec  4 23:04:27 2020
---Host        : l2study running 64-bit Ubuntu 18.04.5 LTS
+--Tool Version: Vivado v.2020.2 (win64) Build 3064766 Wed Nov 18 09:12:45 MST 2020
+--Date        : Sat Dec  5 12:32:42 2020
+--Host        : J1STUDY running 64-bit major release  (build 9200)
 --Command     : generate_target system_20_wrapper.bd
 --Design      : system_20_wrapper
 --Purpose     : IP block netlist
@@ -86,12 +86,6 @@ architecture STRUCTURE of system_20_wrapper is
     je_pin7_o : out STD_LOGIC;
     je_pin3_t : out STD_LOGIC;
     je_pin8_o : out STD_LOGIC;
-    FIXED_IO_mio : inout STD_LOGIC_VECTOR ( 53 downto 0 );
-    FIXED_IO_ddr_vrn : inout STD_LOGIC;
-    FIXED_IO_ddr_vrp : inout STD_LOGIC;
-    FIXED_IO_ps_srstb : inout STD_LOGIC;
-    FIXED_IO_ps_clk : inout STD_LOGIC;
-    FIXED_IO_ps_porb : inout STD_LOGIC;
     DDR_cas_n : inout STD_LOGIC;
     DDR_cke : inout STD_LOGIC;
     DDR_ck_n : inout STD_LOGIC;
@@ -132,7 +126,13 @@ architecture STRUCTURE of system_20_wrapper is
     jb_pin2_t : out STD_LOGIC;
     jb_pin7_o : out STD_LOGIC;
     jb_pin3_t : out STD_LOGIC;
-    jb_pin8_o : out STD_LOGIC
+    jb_pin8_o : out STD_LOGIC;
+    FIXED_IO_mio : inout STD_LOGIC_VECTOR ( 53 downto 0 );
+    FIXED_IO_ddr_vrn : inout STD_LOGIC;
+    FIXED_IO_ddr_vrp : inout STD_LOGIC;
+    FIXED_IO_ps_srstb : inout STD_LOGIC;
+    FIXED_IO_ps_clk : inout STD_LOGIC;
+    FIXED_IO_ps_porb : inout STD_LOGIC
   );
   end component system_20;
   component IOBUF is
