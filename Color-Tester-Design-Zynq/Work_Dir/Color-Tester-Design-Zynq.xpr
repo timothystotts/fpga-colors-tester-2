@@ -3,7 +3,7 @@
 <!--                                                         -->
 <!-- Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.   -->
 
-<Project Version="7" Minor="54" Path="W:/wa/fpga-colors-tester-2/Color-Tester-Design-Zynq/Work_Dir/Color-Tester-Design-Zynq.xpr">
+<Project Version="7" Minor="54" Path="/home/timothystotts/Workareas/GitHub/timothystotts/fpga-colors-tester-2/Color-Tester-Design-Zynq/Work_Dir/Color-Tester-Design-Zynq.xpr">
   <DefaultLaunch Dir="$PRUNDIR"/>
   <Configuration>
     <Option Name="Id" Val="956aa9d07227442c811138fa7c6fa723"/>
@@ -81,26 +81,26 @@
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
-        <CompFileExtendedInfo CompFileName="system_20.bd" FileRelPathName="ip/system_20_PWM_1_0/system_20_PWM_1_0.xci">
-          <Proxy FileSetName="system_20_PWM_1_0"/>
+        <CompFileExtendedInfo CompFileName="system_20.bd" FileRelPathName="ip/system_20_xbar_0/system_20_xbar_0.xci">
+          <Proxy FileSetName="system_20_xbar_0"/>
         </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="system_20.bd" FileRelPathName="ip/system_20_PmodOLEDrgb_0_1/system_20_PmodOLEDrgb_0_1.xci">
           <Proxy FileSetName="system_20_PmodOLEDrgb_0_1"/>
         </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="system_20.bd" FileRelPathName="ip/system_20_xbar_0/system_20_xbar_0.xci">
-          <Proxy FileSetName="system_20_xbar_0"/>
-        </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="system_20.bd" FileRelPathName="ip/system_20_processing_system7_0_0/system_20_processing_system7_0_0.xci">
           <Proxy FileSetName="system_20_processing_system7_0_0"/>
         </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="system_20.bd" FileRelPathName="ip/system_20_rst_ps7_0_50M_0/system_20_rst_ps7_0_50M_0.xci">
-          <Proxy FileSetName="system_20_rst_ps7_0_50M_0"/>
+        <CompFileExtendedInfo CompFileName="system_20.bd" FileRelPathName="ip/system_20_axi_gpio_0_0/system_20_axi_gpio_0_0.xci">
+          <Proxy FileSetName="system_20_axi_gpio_0_0"/>
         </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="system_20.bd" FileRelPathName="ip/system_20_PWM_0_0/system_20_PWM_0_0.xci">
           <Proxy FileSetName="system_20_PWM_0_0"/>
         </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="system_20.bd" FileRelPathName="ip/system_20_axi_gpio_0_0/system_20_axi_gpio_0_0.xci">
-          <Proxy FileSetName="system_20_axi_gpio_0_0"/>
+        <CompFileExtendedInfo CompFileName="system_20.bd" FileRelPathName="ip/system_20_PWM_1_0/system_20_PWM_1_0.xci">
+          <Proxy FileSetName="system_20_PWM_1_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="system_20.bd" FileRelPathName="ip/system_20_rst_ps7_0_50M_0/system_20_rst_ps7_0_50M_0.xci">
+          <Proxy FileSetName="system_20_rst_ps7_0_50M_0"/>
         </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="system_20.bd" FileRelPathName="ip/system_20_auto_pc_0/system_20_auto_pc_0.xci">
           <Proxy FileSetName="system_20_auto_pc_0"/>
@@ -219,11 +219,17 @@
     <Simulator Name="Questa">
       <Option Name="Description" Val="Questa Advanced Simulator"/>
     </Simulator>
+    <Simulator Name="IES">
+      <Option Name="Description" Val="Incisive Enterprise Simulator (IES)"/>
+    </Simulator>
+    <Simulator Name="Xcelium">
+      <Option Name="Description" Val="Xcelium Parallel Simulator"/>
+    </Simulator>
+    <Simulator Name="VCS">
+      <Option Name="Description" Val="Verilog Compiler Simulator (VCS)"/>
+    </Simulator>
     <Simulator Name="Riviera">
       <Option Name="Description" Val="Riviera-PRO Simulator"/>
-    </Simulator>
-    <Simulator Name="ActiveHDL">
-      <Option Name="Description" Val="Active-HDL Simulator"/>
     </Simulator>
   </Simulators>
   <Runs Version="1" Minor="15">
@@ -307,11 +313,9 @@
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
       <RQSFiles/>
     </Run>
-    <Run Id="system_20_auto_pc_0_synth_1" Type="Ft3:Synth" SrcSet="system_20_auto_pc_0" Part="xc7z020clg400-1" ConstrsSet="system_20_auto_pc_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/system_20_auto_pc_0_synth_1" IncludeInArchive="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/system_20_auto_pc_0_synth_1">
+    <Run Id="system_20_auto_pc_0_synth_1" Type="Ft3:Synth" SrcSet="system_20_auto_pc_0" Part="xc7z020clg400-1" ConstrsSet="system_20_auto_pc_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/system_20_auto_pc_0_synth_1" IncludeInArchive="true" AutoIncrementalDir="$PPRDIR/../../../../W:/wa/fpga-colors-tester-2/Color-Tester-Design-Zynq/Work_Dir/Color-Tester-Design-Zynq.srcs/utils_1/imports/system_20_auto_pc_0_synth_1">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2020">
-          <Desc>Vivado Synthesis Defaults</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2020"/>
         <Step Id="synth_design"/>
       </Strategy>
       <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
@@ -456,11 +460,9 @@
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
       <RQSFiles/>
     </Run>
-    <Run Id="system_20_auto_pc_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg400-1" ConstrsSet="system_20_auto_pc_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="system_20_auto_pc_0_synth_1" IncludeInArchive="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/system_20_auto_pc_0_impl_1">
+    <Run Id="system_20_auto_pc_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg400-1" ConstrsSet="system_20_auto_pc_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="system_20_auto_pc_0_synth_1" IncludeInArchive="false" GenFullBitstream="true" AutoIncrementalDir="$PPRDIR/../../../../W:/wa/fpga-colors-tester-2/Color-Tester-Design-Zynq/Work_Dir/Color-Tester-Design-Zynq.srcs/utils_1/imports/system_20_auto_pc_0_impl_1">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2020">
-          <Desc>Default settings for Implementation.</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2020"/>
         <Step Id="init_design"/>
         <Step Id="opt_design"/>
         <Step Id="power_opt_design"/>
