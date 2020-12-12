@@ -1,11 +1,11 @@
 -- Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2020.2 (lin64) Build 3064766 Wed Nov 18 09:12:47 MST 2020
--- Date        : Fri Dec  4 22:10:35 2020
--- Host        : l2study running 64-bit Ubuntu 18.04.5 LTS
--- Command     : write_vhdl -force -mode funcsim -rename_top system_20_PmodKYPD_0_2 -prefix
---               system_20_PmodKYPD_0_2_ system_20_PmodKYPD_0_1_sim_netlist.vhdl
--- Design      : system_20_PmodKYPD_0_1
+-- Date        : Fri Dec 11 19:26:05 2020
+-- Host        : l4study running 64-bit Ubuntu 18.04.5 LTS
+-- Command     : write_vhdl -force -mode funcsim
+--               /home/timothystotts/Workareas/GitHub/timothystotts/fpga-colors-tester-2/Color-Tester-Design-Zynq/IPI-BDs/system_20/ip/system_20_PmodKYPD_0_2/system_20_PmodKYPD_0_2_sim_netlist.vhdl
+-- Design      : system_20_PmodKYPD_0_2
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
 -- Device      : xc7z020clg400-1
@@ -24,6 +24,8 @@ entity system_20_PmodKYPD_0_2_PmodKYPD_xlconcat_0_0 is
   attribute CHECK_LICENSE_TYPE of system_20_PmodKYPD_0_2_PmodKYPD_xlconcat_0_0 : entity is "PmodKYPD_xlconcat_0_0,xlconcat_v2_1_4_xlconcat,{}";
   attribute DowngradeIPIdentifiedWarnings : string;
   attribute DowngradeIPIdentifiedWarnings of system_20_PmodKYPD_0_2_PmodKYPD_xlconcat_0_0 : entity is "yes";
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of system_20_PmodKYPD_0_2_PmodKYPD_xlconcat_0_0 : entity is "PmodKYPD_xlconcat_0_0";
   attribute X_CORE_INFO : string;
   attribute X_CORE_INFO of system_20_PmodKYPD_0_2_PmodKYPD_xlconcat_0_0 : entity is "xlconcat_v2_1_4_xlconcat,Vivado 2020.2";
 end system_20_PmodKYPD_0_2_PmodKYPD_xlconcat_0_0;
@@ -50,6 +52,8 @@ entity system_20_PmodKYPD_0_2_PmodKYPD_xlslice_0_0 is
   attribute CHECK_LICENSE_TYPE of system_20_PmodKYPD_0_2_PmodKYPD_xlslice_0_0 : entity is "PmodKYPD_xlslice_0_0,xlslice_v1_0_2_xlslice,{}";
   attribute DowngradeIPIdentifiedWarnings : string;
   attribute DowngradeIPIdentifiedWarnings of system_20_PmodKYPD_0_2_PmodKYPD_xlslice_0_0 : entity is "yes";
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of system_20_PmodKYPD_0_2_PmodKYPD_xlslice_0_0 : entity is "PmodKYPD_xlslice_0_0";
   attribute X_CORE_INFO : string;
   attribute X_CORE_INFO of system_20_PmodKYPD_0_2_PmodKYPD_xlslice_0_0 : entity is "xlslice_v1_0_2_xlslice,Vivado 2020.2";
 end system_20_PmodKYPD_0_2_PmodKYPD_xlslice_0_0;
@@ -73,6 +77,8 @@ entity system_20_PmodKYPD_0_2_PmodKYPD_xlslice_0_1 is
   attribute CHECK_LICENSE_TYPE of system_20_PmodKYPD_0_2_PmodKYPD_xlslice_0_1 : entity is "PmodKYPD_xlslice_0_1,xlslice_v1_0_2_xlslice,{}";
   attribute DowngradeIPIdentifiedWarnings : string;
   attribute DowngradeIPIdentifiedWarnings of system_20_PmodKYPD_0_2_PmodKYPD_xlslice_0_1 : entity is "yes";
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of system_20_PmodKYPD_0_2_PmodKYPD_xlslice_0_1 : entity is "PmodKYPD_xlslice_0_1";
   attribute X_CORE_INFO : string;
   attribute X_CORE_INFO of system_20_PmodKYPD_0_2_PmodKYPD_xlslice_0_1 : entity is "xlslice_v1_0_2_xlslice,Vivado 2020.2";
 end system_20_PmodKYPD_0_2_PmodKYPD_xlslice_0_1;
@@ -96,6 +102,8 @@ entity system_20_PmodKYPD_0_2_PmodKYPD_xlslice_0_2 is
   attribute CHECK_LICENSE_TYPE of system_20_PmodKYPD_0_2_PmodKYPD_xlslice_0_2 : entity is "PmodKYPD_xlslice_0_2,xlslice_v1_0_2_xlslice,{}";
   attribute DowngradeIPIdentifiedWarnings : string;
   attribute DowngradeIPIdentifiedWarnings of system_20_PmodKYPD_0_2_PmodKYPD_xlslice_0_2 : entity is "yes";
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of system_20_PmodKYPD_0_2_PmodKYPD_xlslice_0_2 : entity is "PmodKYPD_xlslice_0_2";
   attribute X_CORE_INFO : string;
   attribute X_CORE_INFO of system_20_PmodKYPD_0_2_PmodKYPD_xlslice_0_2 : entity is "xlslice_v1_0_2_xlslice,Vivado 2020.2";
 end system_20_PmodKYPD_0_2_PmodKYPD_xlslice_0_2;
@@ -119,6 +127,8 @@ entity system_20_PmodKYPD_0_2_PmodKYPD_xlslice_t_0_0 is
   attribute CHECK_LICENSE_TYPE of system_20_PmodKYPD_0_2_PmodKYPD_xlslice_t_0_0 : entity is "PmodKYPD_xlslice_t_0_0,xlslice_v1_0_2_xlslice,{}";
   attribute DowngradeIPIdentifiedWarnings : string;
   attribute DowngradeIPIdentifiedWarnings of system_20_PmodKYPD_0_2_PmodKYPD_xlslice_t_0_0 : entity is "yes";
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of system_20_PmodKYPD_0_2_PmodKYPD_xlslice_t_0_0 : entity is "PmodKYPD_xlslice_t_0_0";
   attribute X_CORE_INFO : string;
   attribute X_CORE_INFO of system_20_PmodKYPD_0_2_PmodKYPD_xlslice_t_0_0 : entity is "xlslice_v1_0_2_xlslice,Vivado 2020.2";
 end system_20_PmodKYPD_0_2_PmodKYPD_xlslice_t_0_0;
@@ -157,6 +167,8 @@ entity system_20_PmodKYPD_0_2_address_decoder is
     reg1 : in STD_LOGIC_VECTOR ( 7 downto 0 );
     reg2 : in STD_LOGIC_VECTOR ( 7 downto 0 )
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of system_20_PmodKYPD_0_2_address_decoder : entity is "address_decoder";
 end system_20_PmodKYPD_0_2_address_decoder;
 
 architecture STRUCTURE of system_20_PmodKYPD_0_2_address_decoder is
@@ -605,6 +617,8 @@ entity system_20_PmodKYPD_0_2_cdc_sync is
     gpio_io_i : in STD_LOGIC_VECTOR ( 7 downto 0 );
     s_axi_aclk : in STD_LOGIC
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of system_20_PmodKYPD_0_2_cdc_sync : entity is "cdc_sync";
 end system_20_PmodKYPD_0_2_cdc_sync;
 
 architecture STRUCTURE of system_20_PmodKYPD_0_2_cdc_sync is
@@ -1160,6 +1174,8 @@ entity system_20_PmodKYPD_0_2_pmod_concat is
   );
   attribute Bottom_Row_Interface : string;
   attribute Bottom_Row_Interface of system_20_PmodKYPD_0_2_pmod_concat : entity is "GPIO";
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of system_20_PmodKYPD_0_2_pmod_concat : entity is "pmod_concat";
   attribute Top_Row_Interface : string;
   attribute Top_Row_Interface of system_20_PmodKYPD_0_2_pmod_concat : entity is "GPIO";
 end system_20_PmodKYPD_0_2_pmod_concat;
@@ -1259,6 +1275,8 @@ entity system_20_PmodKYPD_0_2_GPIO_Core is
     D : in STD_LOGIC_VECTOR ( 7 downto 0 );
     \Not_Dual.gpio_OE_reg[0]_0\ : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of system_20_PmodKYPD_0_2_GPIO_Core : entity is "GPIO_Core";
 end system_20_PmodKYPD_0_2_GPIO_Core;
 
 architecture STRUCTURE of system_20_PmodKYPD_0_2_GPIO_Core is
@@ -1964,6 +1982,8 @@ entity system_20_PmodKYPD_0_2_PmodKYPD_pmod_bridge_0_0 is
   attribute CHECK_LICENSE_TYPE of system_20_PmodKYPD_0_2_PmodKYPD_pmod_bridge_0_0 : entity is "PmodKYPD_pmod_bridge_0_0,pmod_concat,{}";
   attribute DowngradeIPIdentifiedWarnings : string;
   attribute DowngradeIPIdentifiedWarnings of system_20_PmodKYPD_0_2_PmodKYPD_pmod_bridge_0_0 : entity is "yes";
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of system_20_PmodKYPD_0_2_PmodKYPD_pmod_bridge_0_0 : entity is "PmodKYPD_pmod_bridge_0_0";
   attribute X_CORE_INFO : string;
   attribute X_CORE_INFO of system_20_PmodKYPD_0_2_PmodKYPD_pmod_bridge_0_0 : entity is "pmod_concat,Vivado 2020.2";
 end system_20_PmodKYPD_0_2_PmodKYPD_pmod_bridge_0_0;
@@ -2125,6 +2145,8 @@ entity system_20_PmodKYPD_0_2_slave_attachment is
     s_axi_araddr : in STD_LOGIC_VECTOR ( 2 downto 0 );
     s_axi_awaddr : in STD_LOGIC_VECTOR ( 2 downto 0 )
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of system_20_PmodKYPD_0_2_slave_attachment : entity is "slave_attachment";
 end system_20_PmodKYPD_0_2_slave_attachment;
 
 architecture STRUCTURE of system_20_PmodKYPD_0_2_slave_attachment is
@@ -2791,6 +2813,8 @@ entity system_20_PmodKYPD_0_2_axi_lite_ipif is
     s_axi_araddr : in STD_LOGIC_VECTOR ( 2 downto 0 );
     s_axi_awaddr : in STD_LOGIC_VECTOR ( 2 downto 0 )
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of system_20_PmodKYPD_0_2_axi_lite_ipif : entity is "axi_lite_ipif";
 end system_20_PmodKYPD_0_2_axi_lite_ipif;
 
 architecture STRUCTURE of system_20_PmodKYPD_0_2_axi_lite_ipif is
@@ -2893,6 +2917,8 @@ entity system_20_PmodKYPD_0_2_axi_gpio is
   attribute C_TRI_DEFAULT_2 of system_20_PmodKYPD_0_2_axi_gpio : entity is -1;
   attribute DowngradeIPIdentifiedWarnings : string;
   attribute DowngradeIPIdentifiedWarnings of system_20_PmodKYPD_0_2_axi_gpio : entity is "yes";
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of system_20_PmodKYPD_0_2_axi_gpio : entity is "axi_gpio";
   attribute ip_group : string;
   attribute ip_group of system_20_PmodKYPD_0_2_axi_gpio : entity is "LOGICORE";
 end system_20_PmodKYPD_0_2_axi_gpio;
@@ -3257,6 +3283,8 @@ entity system_20_PmodKYPD_0_2_PmodKYPD_axi_gpio_0_0 is
   attribute CHECK_LICENSE_TYPE of system_20_PmodKYPD_0_2_PmodKYPD_axi_gpio_0_0 : entity is "PmodKYPD_axi_gpio_0_0,axi_gpio,{}";
   attribute DowngradeIPIdentifiedWarnings : string;
   attribute DowngradeIPIdentifiedWarnings of system_20_PmodKYPD_0_2_PmodKYPD_axi_gpio_0_0 : entity is "yes";
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of system_20_PmodKYPD_0_2_PmodKYPD_axi_gpio_0_0 : entity is "PmodKYPD_axi_gpio_0_0";
   attribute X_CORE_INFO : string;
   attribute X_CORE_INFO of system_20_PmodKYPD_0_2_PmodKYPD_axi_gpio_0_0 : entity is "axi_gpio,Vivado 2020.2";
 end system_20_PmodKYPD_0_2_PmodKYPD_axi_gpio_0_0;
@@ -3426,6 +3454,8 @@ entity system_20_PmodKYPD_0_2_PmodKYPD is
     s_axi_aclk : in STD_LOGIC;
     s_axi_aresetn : in STD_LOGIC
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of system_20_PmodKYPD_0_2_PmodKYPD : entity is "PmodKYPD";
 end system_20_PmodKYPD_0_2_PmodKYPD;
 
 architecture STRUCTURE of system_20_PmodKYPD_0_2_PmodKYPD is
@@ -3624,7 +3654,7 @@ entity system_20_PmodKYPD_0_2 is
   attribute NotValidForBitStream : boolean;
   attribute NotValidForBitStream of system_20_PmodKYPD_0_2 : entity is true;
   attribute CHECK_LICENSE_TYPE : string;
-  attribute CHECK_LICENSE_TYPE of system_20_PmodKYPD_0_2 : entity is "system_20_PmodKYPD_0_1,PmodKYPD,{}";
+  attribute CHECK_LICENSE_TYPE of system_20_PmodKYPD_0_2 : entity is "system_20_PmodKYPD_0_2,PmodKYPD,{}";
   attribute DowngradeIPIdentifiedWarnings : string;
   attribute DowngradeIPIdentifiedWarnings of system_20_PmodKYPD_0_2 : entity is "yes";
   attribute X_CORE_INFO : string;

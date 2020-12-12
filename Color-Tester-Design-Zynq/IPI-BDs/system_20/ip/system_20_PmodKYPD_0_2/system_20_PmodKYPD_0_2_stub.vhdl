@@ -1,11 +1,11 @@
 -- Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2020.2 (lin64) Build 3064766 Wed Nov 18 09:12:47 MST 2020
--- Date        : Fri Dec  4 22:10:34 2020
--- Host        : l2study running 64-bit Ubuntu 18.04.5 LTS
--- Command     : write_vhdl -force -mode synth_stub -rename_top system_20_PmodKYPD_0_2 -prefix
---               system_20_PmodKYPD_0_2_ system_20_PmodKYPD_0_1_stub.vhdl
--- Design      : system_20_PmodKYPD_0_1
+-- Date        : Fri Dec 11 19:26:05 2020
+-- Host        : l4study running 64-bit Ubuntu 18.04.5 LTS
+-- Command     : write_vhdl -force -mode synth_stub
+--               /home/timothystotts/Workareas/GitHub/timothystotts/fpga-colors-tester-2/Color-Tester-Design-Zynq/IPI-BDs/system_20/ip/system_20_PmodKYPD_0_2/system_20_PmodKYPD_0_2_stub.vhdl
+-- Design      : system_20_PmodKYPD_0_2
 -- Purpose     : Stub declaration of top-level module interface
 -- Device      : xc7z020clg400-1
 -- --------------------------------------------------------------------------------
